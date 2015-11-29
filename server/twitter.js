@@ -64,11 +64,17 @@ if(Meteor.isServer){
                    longitude=result[0].longitude;
                          console.log(latitude);
                    }
-                   
+              var distressCallCoords = {lat:latitude , lng:longitude};       
 
-       Twitterlocation.insert({name:name,number:number,latitudes:latitude,Longitudes:longitude,doneflag:"false"});
-      // Twitterlocation.insert({name:name,number:number,latitudes:latitude,Longitudes:longitude,doneflag:"false"});
-
+    
+     
+        Meteor.call('addDistressSignal', {
+      "coords": distressCallCoords,
+      "helped": false,
+      "phone": number,
+      "fullName": name,
+      "source":"twitter"
+    });
                       
 		  }
 		}))

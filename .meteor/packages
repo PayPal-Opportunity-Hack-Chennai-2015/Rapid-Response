@@ -24,9 +24,9 @@ kadira:flow-router
 kadira:blaze-layout
 dburles:google-maps
 
+ecwyne:nexmo-sms
+autopublish
 
 schiller:twit
 aldeed:geocoder
-http
-ecwyne:nexmo-sms
-autopublish
+
