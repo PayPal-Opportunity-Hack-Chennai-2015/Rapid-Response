@@ -60,14 +60,14 @@ if(Meteor.isServer){
                 if(address!=""){
                    var geo = new GeoCoder();
                    var result = geo.geocode(address);
-                  latitude=result[0].latitude;
-                  longitude=result[0].longitude;
+                   latitude=result[0].latitude;
+                   longitude=result[0].longitude;
                          console.log(latitude);
                    }
                    
 
        Twitterlocation.insert({name:name,number:number,latitudes:latitude,Longitudes:longitude,doneflag:"false"});
-       Twitterlocation.insert({name:name,number:number,latitudes:latitude,Longitudes:longitude,doneflag:"false"});
+      // Twitterlocation.insert({name:name,number:number,latitudes:latitude,Longitudes:longitude,doneflag:"false"});
 
                       
 		  }
