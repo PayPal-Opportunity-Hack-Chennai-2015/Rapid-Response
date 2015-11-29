@@ -10,16 +10,8 @@ Template.MobileSignupUI.events({
       return false;
     }
 
-    Session.set('phoneVerificationSent', true);
-    Session.set('mobileNumber', indianPhone);
-    Session.set('fullName', fullName);
-  },
-  'click #mobileVerifyBtn'(ev) {
-    ev.preventDefault();
-    Session.set('forceLogin', true);
+    localStorage.setItem('mobileNumber', indianPhone);
+    localStorage.setItem('fullName', fullName);
+    Session.set('signupComplete', true);
   }
-});
-
-Template.MobileSignupUI.helpers({
-  'phoneVerificationSent': () => {return Session.get('phoneVerificationSent')}
 });

@@ -3,25 +3,13 @@ Template.BigDistressUI.events({
     ev.preventDefault();
 
     Meteor.call('addDistressSignal', {
-      "coords": Session.get('distressCallCoords'),
+      "coords": JSON.parse(localStorage.getItem('distressCallCoords')),
       "helped": false,
       "report": $('#distress-report').val(),
-      "phone": Session.get("mobileNumber"),
-      "fullName": Session.get("fullName")
+      "phone": localStorage.getItem("mobileNumber"),
+      "fullName": localStorage.getItem("fullName")
     });
-
-    Session.set("distressCallSent", true);
-  }
-})
-
-Template.BigDistressUI.events({
-  'click #custom-location-button'(ev) {
-    ev.preventDefault();
-
-    // if (Geolocation.error()) {
-    //   alert(`There's a problem with your Geolocation! Error we got: ${Geolocation.error()}`);
-    // }
 
     Session.set("customLocationOptionSelected", true);
   }
-})
+});

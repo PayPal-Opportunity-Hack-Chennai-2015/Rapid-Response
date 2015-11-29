@@ -5,11 +5,7 @@
     </div>
     {{#if forceLoginActive}}
       {{#unless distressCallSent}}
-        {{#if customLocationOptionSelected}}
-           {{> CustomLocationUI}}
-        {{else}}
-            {{> BigDistressUI}}
-        {{/if}}
+          {{> BigDistressUI}}
       {{else}}
         {{> DistressResponseMessage}}
       {{/unless}}

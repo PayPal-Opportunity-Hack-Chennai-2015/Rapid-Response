@@ -1,0 +1,12 @@
+<template name="BigDistressUI">
+  <div class="col-xs-12 text-center">
+    <div class="big-distress-ui">
+                <!-- Single button -->
+                  
+                  <h4>Please provide details</h4>
+                  <textarea rows="4" cols="25" id="distress-report"></textarea><br>
+
+                  <button id="trigger-button" class="btn btn-warning btn-lg">HELP!</button>
+    </div>
+  </div>
+</template>
