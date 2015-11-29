@@ -1,5 +1,5 @@
 Template.DistressResponseMessage.helpers({
   'victimCoords'() {
-    return Session.get("distressCallCoords");
+    return JSON.parse(localStorage.getItem("distressCallCoords"));
   }
 });
