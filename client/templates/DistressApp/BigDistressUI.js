@@ -10,6 +10,6 @@ Template.BigDistressUI.events({
       "fullName": localStorage.getItem("fullName")
     });
 
-    Session.set("customLocationOptionSelected", true);
+    Session.set("distressCallSent", true);
   }
 });
