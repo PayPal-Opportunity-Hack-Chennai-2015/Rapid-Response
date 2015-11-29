@@ -23,6 +23,7 @@ deps@1.0.9
 diff-sequence@1.0.1
 ecmascript@0.1.6
 ecmascript-runtime@0.2.6
+ecwyne:nexmo-sms@1.0.2
 ejson@1.0.7
 es5-shim@4.1.14
 fastclick@1.0.7
@@ -58,7 +59,6 @@ reactive-var@1.0.6
 reload@1.1.4
 retry@1.0.4
 routepolicy@1.0.6
-schiller:twit@0.0.1
 session@1.1.1
 spacebars@1.0.7
 spacebars-compiler@1.0.7
