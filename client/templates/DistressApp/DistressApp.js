@@ -15,7 +15,7 @@ Template.DistressApp.helpers({
     return Session.get("distressCallSent") === true;
   },
   'forceLoginActive'() {
-    return Session.get('forceLogin') === true;
+    return Session.get('signupComplete') === true || (localStorage.getItem('mobileNumber') && localStorage.getItem('fullName'));
   }
 });
 
@@ -23,16 +23,12 @@ Tracker.autorun(function (computation) {
   var userGeoLocation = new ReactiveVar(null);
   userGeoLocation.set(Geolocation.latLng());
   if (userGeoLocation.get()) {
-    Session.set("distressCallCoords", Geolocation.latLng());
+    localStorage.setItem("distressCallCoords", JSON.stringify(Geolocation.latLng()));
+
     //stop the tracker if we got something
     computation.stop();
   }
 });
-
-Template.DistressApp.onRendered(() => {
-  console.log("hello there!");
-});
-
 
 Meteor.startup(() => {
   GoogleMaps.load();
