@@ -1,4 +1,16 @@
 Template.DistressApp.helpers({
+  'distressCallMainView'() {
+    return Session.get("distressCallView") === true;
+  },
+});
+
+Template.DistressApp.helpers({
+  'customLocationOptionSelected'() {
+    return Session.get("customLocationOptionSelected") === true;
+  },
+});
+
+Template.DistressApp.helpers({
   'distressCallSent'() {
     return Session.get("distressCallSent") === true;
   },

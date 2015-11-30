@@ -60,8 +60,8 @@ if(Meteor.isServer){
                 if(address!=""){
                    var geo = new GeoCoder();
                    var result = geo.geocode(address);
-                  latitude=result[0].latitude;
-                  longitude=result[0].longitude;
+                   latitude=result[0].latitude;
+                   longitude=result[0].longitude;
                          console.log(latitude);
                    }
               var distressCallCoords = {lat:latitude , lng:longitude};       

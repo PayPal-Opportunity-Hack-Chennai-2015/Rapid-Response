@@ -1,8 +1,11 @@
 <template name="MobileSignupUI">
+  {{#unless phoneVerificationSent}}
     <div id="collect-info">
       <div class="col-xs-10 col-xs-offset-1">
-        <h5>Looks like this is the first time you're using the app.</h5>
-        <p>Please tell us a couple things to help you better.</p>
+      <!--  <h5>Looks like this is the first time you're using the app.</h5>-->
+      <div align="center">
+        <p id="head">Please tell us a couple things to help you better.</p>
+      </div>
       </div>
       <div class="col-xs-12" style="margin-top:2em;">
         <div class="form-group">
@@ -33,4 +36,25 @@
         </div>
       </div>
     </div>
+  {{else}}
+    <div id="collect-verification">
+      <p>Thanks! Please enter the code you got via SMS:</p>
+
+      <div class="form-group">
+        <label for="verificationCode" class="sr-only">Enter code:</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Verification code"
+          name="verificationCode">
+      </div>
+      <div class="form-group">
+        <button
+          class="btn btn-default btn-success"
+          id="mobileVerifyBtn">
+          Verify
+        </button>
+      </div>
+    </div>
+  {{/unless}}
 </template>
