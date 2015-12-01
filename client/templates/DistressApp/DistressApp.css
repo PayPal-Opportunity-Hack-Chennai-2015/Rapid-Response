@@ -1,0 +1,42 @@
+body {
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:#F44D3C;
+  }
+
+#call{
+	color:#fff;
+	margin-top: 30%;
+}
+
+#mobileSignupBtn{
+	background-color:#fff;
+	position: relative;
+	left:35%;
+	color:#f44d3c;
+}
+
+#trigger-button{
+	background-color: #FFF;
+    position: relative;
+     left: 1%;
+    top: 10%;
+    color: #F44D3C;
+}
+.btn-primary{
+	border-color:#fff;
+}
+
+.btn-primary:focus{
+	border-color:#fff;
+}
+body{
+	background-color: #f44d3c;
+}
+textarea{
+	margin: 15px;
+}
+
+#msg{
+	color: #fff;
+	margin-top: 32%;
+}
